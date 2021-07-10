@@ -1,0 +1,32 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block contenido %}
+
+<body>
+    {% load crispy_forms_tags %}
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-6 offset-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h2>Ingresar usuario</h2>
+                        <p > Recuerda Que si te Registras Por cada una de tus compras un % sera donado a nuestra fundacion</p>
+                        <form action="" method="POST">
+                            {% csrf_token %}
+                            <table>
+                                {{ form | crispy }}
+                            </table>
+                            <input type="submit" value="Acceder" class="btn btn-success float-right">
+                            <a href="{% url 'signup' %}" class="btn btn-info float-left">Registrarse</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <img src="{% static 'app/dist/img/1.png' %}" width="100%px" height="280px"
+            border="0">
+        </div>
+    </div>
+</body>
+
+
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+
+{% block contenido %}
+<div class='container'>
+  <div class='window'>
+    <div class='order-info'>
+      <div class='order-info-content'>
+        <h2>Resumen de la orden</h2>
+        <table class='order-table'>
+        </table>
+        <table class='order-table'>
+        </table>
+        <table class='order-table'>
+        </table>
+        <div class='line'></div>
+        <div class='total'>
+          <span style='float:left;'>
+            <div class='thin dense'>IVA 19%</div>
+            <div class='thin dense'>Envio</div>
+            <div class='thin dense'>Codigo Descuento</div>
+            <div class='thin dense'>TOTAL</div>
+          </span>
+          <span style='float:right; text-align:right;'>
+          </span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'app/dist/css/credit.css' %}">
+{% endblock %}

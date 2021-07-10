@@ -1,0 +1,34 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block contenido %}
+{% block javascript %}
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="{% static 'app/dist/js/funcionalidades.js' %}"></script>
+{% endblock %}
+<link rel="stylesheet" href="{% static 'app/dist/css/agremod.css' %}">
+
+<section class="forma">
+    <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+            <form action="" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <table>
+                    {{form|crispy}}
+                </table>
+                {% if perms.app.change_producto %}
+                <input type="submit" class="btn btn-success" value="Guardar">
+                {% endif %}
+
+            </form>
+            {{mensaje}}
+        </div>
+        <div class="col-sm-2"></div>
+    </div>
+</section>
+
+{% endblock %}
+
+
+

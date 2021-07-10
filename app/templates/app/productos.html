@@ -1,0 +1,55 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% load humanize %}
+{% block contenido %}
+<main>
+    <div>
+        <img src="{% static 'app/dist/img/pngtree-simple-flat-red-coupon-background-image_262006.png' %}" width="100%px" height="280px"
+            border="0">
+    </div>
+    <div class="text-center">
+        <h1 class="display-4 mt-4">Lista de Productos "Special Garden"</h1>
+        <p class="lead">Selecciona uno de nuestros productos y accede a un descuento</p>
+    </div>
+    <div class="container" id="lista-productos">
+
+        <div class="card-deck mb-3 text-center">
+            {% for aux in listasProductos %}
+            <div class="col-xs-4 col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-bold">{{ aux.nombre }}</h4>
+                    </div>
+                    <div class="card-body">
+                        {% if aux.imagen %}
+                        <img src="{{ aux.imagen.url }}" class="card-img-top" width="100px" height="180px">
+                        {% else %}
+                        <p> No posee imagen.</p>
+                        {% endif %}
+                        <h1 class="card-title pricing-card-title precio"></h1>
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <span class="">${{ aux.precio | intcomma }}</span>
+                            <li>{{ aux.stock }}</li>
+                            <li>{{ aux.descripcion }}</li>
+                            <li>{{ aux.categoria }}</li>
+                        </ul>
+                        <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="1">Comprar</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+
+</main>
+
+<div>
+    {% include 'app/paginator.html' %}
+</div>
+{% endblock %}
+{% block javascript %}
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="{% static 'app/dist/js/funcionalidades.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,104 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block contenido %}
+
+<link rel="stylesheet" href="{% static 'app/dist/css/agremod.css' %}">
+
+<div class="container">
+    <section class="forma">
+        <div class="row">
+            <div class="col-lg-3 col-6">
+                <div class="small-box bg-info">
+                </div>
+            </div>
+            <div class="col-lg-6 col-12">
+                <div>
+                    <video class="responsive-video" controls="controls" muted="muted" autoplay="autoplay" width="100%">
+                        <source src="{% static 'app/dist/img/PublicidadArbol.mp4' %}" type="video/mp4">
+                       
+                    </video>
+                    
+                </div>
+            </div>
+            <div class="col-lg-3 col-6">
+                <div class="small-box bg-danger">
+                </div>
+            </div>
+        </div>
+        <!-- ./col -->
+        <div class="row">
+            <div class="col-lg-1 col-1">
+                <div class="small-box bg-info">
+                </div>
+            </div>
+            <div class="col-lg-10 col-12">
+                <div>
+                    <div class=" text-center">
+                        <h1 class="display-4 mt-4">Nuestra fundacion</h1>
+                        
+                    </div>
+                    <p>
+                        En Cultiva tienes la posibilidad de aportar regalando una tarjeta con sentido, que equivale a
+                        plantar un
+                        árbol nativo en nombre de la persona a quien regalas, ya sea por motivo de alguna celebración,
+                        un
+                        nacimiento o fallecimiento o en forma de agradecimiento.Cada donación contempla los materiales e
+                        insumos
+                        requeridos para la plantación del árbol, por medio de una reforestación participativa organizada
+                        por
+                        Cultiva junto a la comunidad, además de la implementación de un sistema de riego y la mantención
+                        por
+                        2
+                        temporadas secas (Octubre-Mayo).
+
+                    </p>
+                    <p>
+                        El aporte por cada tarjeta o árbol es de $8.000; al realizar la donación podrás seleccionar si
+                        quieres
+                        que llegue al destinatario en forma digital o física. En este último caso se agregará $2.500
+                        correspondientes al costo de materiales, impresión y envío a través de correo certificado. El
+                        tiempo
+                        aproximado de despacho es 5 días hábiles dentro de la Región Metropolitana.En la tarjeta se
+                        puede
+                        agregar un mensaje de hasta 130 caracteres (incluyendo espacios).
+                    </p>
+                    <p>
+                        AVISO: Si seleccionas la opción WEBPAY la tarjeta se emitirá de inmediato; si escoges la opción
+                        TRANSFERENCIA BANCARIA la emisión de la tarjeta quedará pendiente hasta cuando nosotros no
+                        validemos
+                        el
+                        ingreso de la transferencia.
+                    </p>
+                    <div class=" text-center" style="padding: 15px;">
+                        <input type="submit" value="Registrarse" class="btn btn-success " style="width: 50%; ">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-1 col-1">
+                <div class="small-box bg-danger">
+                </div>
+            </div>
+        </div>
+
+        <div class="card-deck mb-3 text-center">
+
+            <div class="card mb-4 shadow-sm">
+                <div class="card-header"><img src="{% static 'app/dist/img/plantando1.jpeg' %}" height="217px"
+                        class="card-img-top"></div>
+            </div>
+            <div class="card mb-4 shadow-sm">
+                <div class="card-header">
+                    <img src="{% static 'app/dist/img/plantando2.jpg' %}" height="217px" class="card-img-top">
+                </div>
+            </div>
+
+            <div class="card mb-4 shadow-sm">
+                <div class="card-header">
+                    <img src="{% static 'app/dist/img/plantando3.jpg' %}" height="217px" class="card-img-top">
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}

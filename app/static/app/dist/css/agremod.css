@@ -1,0 +1,12 @@
+.forma{
+    width: auto;
+    height: auto;
+    background: #4e4d4d;
+    margin: auto;
+    margin-top: auto;
+    box-shadow: 7px 13px 37px rgb(0, 0, 0);
+    padding: 50px 50px;
+    border-top: 4px solid #017bab;
+    color: white;
+}
+

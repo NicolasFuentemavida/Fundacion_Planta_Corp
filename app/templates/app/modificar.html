@@ -1,0 +1,58 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block contenido %}
+<table class="table table-condensed">
+    <thead>
+        <tr>
+            <td>IMAGEN</td>
+            <td>NOMBRE</td>
+            <td>PRECIO</td>
+            <td>STOCK</td>
+            <td>DESCRIPCION</td>
+            <td>CATEGORIA</td>
+            <td>FECHA</td>
+        </tr>
+    </thead>
+    <tbody>
+        {% for aux in listasProductos %}
+        <tr>
+            <td>
+                {% if aux.imagen %}
+
+                <img src="{{ aux.imagen.url }}" alt="" width="50" height="50">
+
+                {% else %}
+
+                <p> No posee imagen.</p>
+
+                {% endif %}
+            </td>
+            <td>{{ aux.nombre }}</td>
+            <td>{{ aux.precio }}</td>
+            <td>{{ aux.stock }}</td>
+            <td>{{ aux.descripcion }}</td>
+            <td>{{ aux.categoria }}</td>
+            <td>{{ aux.fecha }}</td>
+            <td>
+                {% if perms.app.change_producto %}
+                <a href="{% url 'modificar_producto' aux.id %}" class="btn btn-info">Modificar</a>
+                <a onclick="confirmarDelete({{ aux.id }})" class="btn btn-danger">Elimar</a>
+                {% endif %}
+
+            </td>
+
+
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<div>
+    {% include 'app/paginator.html' %}
+</div>
+{% endblock %}
+
+{% block javascript %}
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="{% static 'app/dist/js/funcionalidades.js' %}"></script>
+{% endblock %}

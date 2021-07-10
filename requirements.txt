@@ -1,0 +1,7 @@
+django
+pillow
+django-crispy-forms
+djangorestframework
+cx_oracle
+social-auth-app-django
+django-pwa

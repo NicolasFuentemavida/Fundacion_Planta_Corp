@@ -1,0 +1,67 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block contenido %}
+<link rel="stylesheet" href="{% static 'app/dist/css/agremod.css' %}">
+<section class="forma">
+    <div class="row">
+        <div class="col-lg-1 col-1">
+            <div class="small-box bg-info">
+            </div>
+        </div>
+        <div class="col-lg-10 col-12">
+            <div>
+                <div class=" text-center">
+                    <h1 class="display-4 mt-4">Nuestros Contactos</h1>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col l6 s12">
+                            <h2 class="white-text">Huerto especial</h2>
+                            <h6 class="white-text text-lighten-6">PLANTA TUS SUEÑOS Y CRECERÁN DÍAS FELICES
+                            </h6>
+                            <h6>
+                                ENCUENTRANOS EN ESTA DIRECCIÓN:
+                            </h6>
+
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.265734954597!2d-70.58078458479675!3d-33.598408990056875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662d7037854df81%3A0x893f58a1479b8f82!2sDuoc%20UC%3A%20Sede%20Puente%20Alto!5e0!3m2!1ses!2scl!4v1618666456134!5m2!1ses!2scl"
+                                width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+                        </div>
+                        <div class="col l4 offset-l2 s12">
+                            <h2 class="white-text">Siguenos en nuestras redes Sociales:</h2>
+                            <ul>
+                                <a href="https://www.facebook.com/"><img
+                                        src="{% static 'app/dist/img/IconFacebook.png' %}" alt="" width="54"
+                                        height="55"></a>
+                                <a href="https://www.instagram.com/"><img
+                                        src="{% static 'app/dist/img/IconInstagram.png' %}" alt="" width="54"
+                                        height="55"></a>
+                                <a href="https://twitter.com/?lang=es"><img
+                                        src="{% static 'app/dist/img/IconTiwtter.png' %}" alt="" width="54"
+                                        height="55"></a>
+                                <a href="https://web.whatsapp.com/"><img
+                                        src="{% static 'app/dist/img/IconWhatsapp.png' %}" alt="" width="54"
+                                        height="55"></a>
+                                <div>
+                                    <p class="LetrasFooter">Contacto Legal: Planta.viva@gmail.com</p>
+                                    <p class="LetrasFooter">Encuentranos en: Duoc, Sede Puente Alto</p>
+                                    <p class="LetrasFooter">Llamanos al Fono: (+56) 2 2999 3862</p>
+                                    <p><img src="{% static 'app/dist/img/LogoPlanta.png' %}" alt="" height="150px"
+                                            width="150px"></p>
+
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-1 col-1">
+                <div class="small-box bg-danger">
+                </div>
+            </div>
+        </div>
+</section>
+{% endblock %}
